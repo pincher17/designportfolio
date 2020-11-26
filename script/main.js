@@ -1,6 +1,6 @@
 const btnBurger = document.getElementById('burger');
 const catalog = document.querySelector('.catalog');
-const closeMenu1 = document.getElementById('close_menu_btn');
+//const closeMenu1 = document.getElementById('close_menu_btn');
 const overlay = document.getElementById('overlay');
 const aboutMe = document.getElementById('block_me');
 const aboutMenuBtn = document.getElementById('about_menu');
@@ -58,7 +58,7 @@ const scrollContacts = () => {
 };
 
 btnBurger.addEventListener('click', openMenu);
-closeMenu1.addEventListener('click', closeMenu);
+//closeMenu1.addEventListener('click', closeMenu);
 overlay.addEventListener('click', closeMenu);
 aboutMenuBtn.addEventListener('click', scrollAbout);
 btnHome.addEventListener('click', scrollHome);
