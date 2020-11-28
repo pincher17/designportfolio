@@ -73,6 +73,27 @@ btnPortfolio1.addEventListener('click', scrollPortfolio);
 btnContacts1.addEventListener('click', scrollContacts);
 
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(json => console.log(json))
+
+const portfolioDiv = document.querySelector('.portfolio_allimg');
+
+
+
+async function getResponse() {
+    let response = await fetch('https://jsonplaceholder.typicode.com/photos');
+    let content = await response.json();
+    content = content.splice(0, 3);
+    console.log(content);
+
+
+let key;
+
+for(key in content){
+
+    portfolioDiv.innerHTML += `<div class="portfolio_122div">
+    <img class="portfolio1_11" src="${content[key].url}"></img>
+    </div>
+    <p class="fashion">Online fashion store - Homepage</p>`
+
+}
+}
+getResponse();
