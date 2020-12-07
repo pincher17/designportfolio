@@ -79,11 +79,26 @@ const portfolioDiv = document.querySelector('.portfolio_allimg');
 
 
 async function getResponse() {
+    const showMore = document.getElementById('showMore');
+    showMore.addEventListener('click', addContent);
     let response = await fetch('https://jsonplaceholder.typicode.com/photos');
     let content = await response.json();
-    content = content.splice(0, 7);
+    let n = 3;
+    content = content.splice(0, n);
     console.log(content);
 
+    function addContent (){
+        
+        for(key in content){
+
+            portfolioDiv.innerHTML += `<div class="portfolio_122div">
+            <img class="portfolio1_11" src="${content[key].url}"></img>
+            </div>
+            <p class="fashion">Online fashion store - Homepage</p>`;
+        
+        }
+
+    }
 
 let key;
 
@@ -92,7 +107,7 @@ for(key in content){
     portfolioDiv.innerHTML += `<div class="portfolio_122div">
     <img class="portfolio1_11" src="${content[key].url}"></img>
     </div>
-    <p class="fashion">Online fashion store - Homepage</p>`
+    <p class="fashion">Online fashion store - Homepage</p>`;
 
 }
 }
