@@ -101,8 +101,16 @@ for(key in content){
 }
 
 
-function addContent (){
-        
+ function addContent (){
+    
+    
+    /* let v = 3;
+    let m = 3;
+    d+=3;
+    b+=3;
+    content = content.slice(v, m);
+    console.log(content); */
+
     for(key in content){
 
         portfolioDiv.innerHTML += `<div class="portfolio_122div">
