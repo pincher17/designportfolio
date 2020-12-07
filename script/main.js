@@ -87,18 +87,7 @@ async function getResponse() {
     content = content.splice(0, n);
     console.log(content);
 
-    function addContent (){
-        
-        for(key in content){
-
-            portfolioDiv.innerHTML += `<div class="portfolio_122div">
-            <img class="portfolio1_11" src="${content[key].url}"></img>
-            </div>
-            <p class="fashion">Online fashion store - Homepage</p>`;
-        
-        }
-
-    }
+   
 
 let key;
 
@@ -110,6 +99,21 @@ for(key in content){
     <p class="fashion">Online fashion store - Homepage</p>`;
 
 }
+
+
+function addContent (){
+        
+    for(key in content){
+
+        portfolioDiv.innerHTML += `<div class="portfolio_122div">
+        <img class="portfolio1_11" src="${content[key].url}"></img>
+        </div>
+        <p class="fashion">Online fashion store - Homepage</p>`;
+    
+    }
+
+}
+
 }
 getResponse();
 
